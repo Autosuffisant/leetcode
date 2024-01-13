@@ -10,8 +10,9 @@ class Solution:
             tLetters[letter] = tLetters.get(letter, 0) + 1
 
         for letter in "abcdefghijklmnopqrstuvwxyz":
-            sOccurence = sLetters.get(letter) or 0
-            tOccurence = tLetters.get(letter) or 0
+            sOccurence = sLetters.get(letter, 0)
+            tOccurence = tLetters.get(letter, 0)
+
             if sOccurence > tOccurence:
                 sLetters[letter] = sOccurence - tOccurence
             else:
